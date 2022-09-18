@@ -4,5 +4,30 @@
   "description": "A Test Automation Example using Node.js and Cucumber",
   "main": "index.js",
   "author": "Indra Basak",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --parallel 3 && node ./report.js",
+    "health": "./node_modules/.bin/cucumber-js -f json:cucumber.json src/features/ -r src/steps/ --tags '@health'",
+    "report": "node ./report.js",
+    "lint": "./node_modules/.bin/eslint ./src ./*.js -f table"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-table": "^7.32.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^8.5.3",
+    "axios": "^0.27.2",
+    "crypto": "^1.0.1",
+    "cucumber-html-reporter": "^5.5.0",
+    "dotenv-flow": "^3.2.0",
+    "qs": "^6.11.0"
+  }
 }
