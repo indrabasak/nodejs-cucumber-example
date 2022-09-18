@@ -4,5 +4,21 @@
   "description": "A REST service using Node.js",
   "main": "index.js",
   "author": "Indra Basak",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-table": "^7.32.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "node-cache": "^5.1.2",
+    "uuid": "^9.0.0"
+  }
 }
