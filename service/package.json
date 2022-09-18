@@ -1,0 +1,8 @@
+{
+  "name": "rest-service-example",
+  "version": "1.0.0",
+  "description": "A REST service using Node.js",
+  "main": "index.js",
+  "author": "Indra Basak",
+  "license": "MIT"
+}

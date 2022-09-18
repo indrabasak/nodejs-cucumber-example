@@ -1,0 +1,8 @@
+{
+  "name": "cucumber-test-example",
+  "version": "1.0.0",
+  "description": "A Test Automation Example using Node.js and Cucumber",
+  "main": "index.js",
+  "author": "Indra Basak",
+  "license": "MIT"
+}
