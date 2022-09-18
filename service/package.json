@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Indra Basak",
   "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./src/*.js -f table"
+  },
   "devDependencies": {
     "@types/node": "^18.7.18",
     "eslint": "^8.11.0",
