@@ -1,10 +1,13 @@
 const express = require('express');
 const NodeCache = require('node-cache');
 const uuid = require('uuid');
+const { setTimeout } = require('timers/promises');
 
 const app = express();
 app.use(express.json());
 const cache = new NodeCache({ stdTTL: 15 });
+
+let count = 0;
 
 app.post('/books', (req, res) => {
   const id = uuid.v4().toString();
@@ -35,8 +38,20 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'UP' });
 });
 
+app.get('/timeout', async (req, res) => {
+  count += 1;
+  if (count % 3 === 0) {
+    return res.status(200).json({ status: 'Hello' });
+  }
+
+  await setTimeout(1000 * 20);
+
+  return res.status(200).json({ status: 'Hello' });
+});
+
 const server = app.listen(8081, () => {
   const host = server.address().address;
   const { port } = server.address();
   console.log('Example app listening at http://%s:%s', host, port);
 });
+server.setTimeout(3000);
