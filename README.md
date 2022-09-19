@@ -1,3 +1,5 @@
+![](./img/node-cucumber.svg)
+
 Node.js with Cucumber Example
 =================================
 Test Automation of a REST API using Node.js and [Cucumber](https://cucumber.io/).
